@@ -1,0 +1,71 @@
+
+This project was developed step-by-step to predict the number of goals scored by Premier League players using a Linear Regression model.
+
+1️⃣ Problem Definition
+Objective: Predict how many goals a player will score based on match statistics.
+
+Context: Useful for analysts, scouts, and fantasy league enthusiasts.
+
+2️⃣ Data Collection
+Dataset: EPL 2020–21 Player Stats
+
+Key features: Goals, Assists, Minutes, xG, xA, Pass accuracy, etc.
+
+3️⃣ Data Preprocessing
+Cleaned dataset (.dropna())
+
+Removed unnecessary columns (e.g., player names)
+
+Selected numeric features only for model training
+
+Feature engineering: created or adjusted columns like MinsPerMatch
+
+4️⃣ Exploratory Data Analysis (EDA)
+Visualizations:
+
+Histogram of goals
+
+Scatter plot: Goals vs Assists (colored by position)
+
+Correlation heatmap for numeric features
+
+Identified key contributors to goal scoring (e.g., xG, Mins, Assists)
+
+5️⃣ Model Building
+Model: LinearRegression (from Scikit-learn)
+
+Split data: 80% training, 20% testing
+
+Evaluated using:
+
+R² Score: ~0.60
+
+Mean Absolute Error (MAE): ~1.24
+
+6️⃣ Prediction
+Created a custom input to test the model:
+
+python
+Copy
+Edit
+model.predict([[Age, Matches, Starts, Mins, Assists, xG, xA, Passes_Attempted, Perc_Passes_Completed, MinsPerMatch]])
+Used real-world examples to test accuracy.
+
+7️⃣ Results & Visualization
+Visual tools: Seaborn + Matplotlib
+
+Helped understand:
+
+Stats distribution
+
+Key feature importance
+
+Model behavior
+
+8️⃣ Future Improvements
+Try advanced models: Ridge, Lasso, or Ensemble methods
+
+Encode categorical variables (e.g., Position, Club)
+
+Add new features (e.g., Shots on Target, Key Passes)
+
